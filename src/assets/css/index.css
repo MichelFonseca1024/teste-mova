@@ -1,0 +1,18 @@
+@import './variables.css';
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-width: 100%;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
