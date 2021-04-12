@@ -136,5 +136,9 @@ li button:hover,
   .country {
     margin-bottom: 15px;
   }
+
+  ul {
+    margin: 30px 0px;
+  }
 }
 </style>
