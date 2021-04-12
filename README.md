@@ -14,16 +14,12 @@ yarn serve
 
 ### Compiles and minifies for production
 
-````
+```
 yarn build
-```edit
+```
 
 ### Lints and fixes files
 
-````
-
-yarn lint
-
 ```
-
+yarn lint
 ```
