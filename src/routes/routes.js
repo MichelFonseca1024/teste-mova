@@ -5,9 +5,9 @@ const routes = [
     component: () => import('../views/Home.vue')
   },
   {
-    path: '/teste',
-    name: 'Teste',
-    component: () => import('../views/teste2.vue')
+    path: '/country/:alpha2Code',
+    name: 'Country',
+    component: () => import('../views/Country.vue')
   },
   {
     path: '*',

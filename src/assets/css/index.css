@@ -16,3 +16,36 @@ body {
 a {
   text-decoration: none;
 }
+
+select,
+button {
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  padding-top: 150px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.filter {
+  border-bottom: 1px solid var(--color-text-primary);
+}
+
+.filter > p {
+  color: var(--color-text-primary);
+}
+
+.filter > select {
+  color: var(--color-text-secondary);
+  width: 100%;
+}
+
+@media all and (max-width: 425px) {
+  .container {
+    max-width: 90%;
+  }
+}

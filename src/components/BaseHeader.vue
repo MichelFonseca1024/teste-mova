@@ -1,10 +1,10 @@
 <template>
   <header class="header">
-    <div class="container">
-      <router-link :to="{ name: 'home' }" class="logo">
+    <div>
+      <router-link :to="{ name: 'Home' }" class="logo">
         <img src="@/assets/img/logo_principal.png" alt="Mova" />
       </router-link>
-      <go-back-button />
+      <go-back-button v-if="isInCountry" />
     </div>
   </header>
 </template>
@@ -14,8 +14,15 @@ import GoBackButton from './GoBackButton'
 
 export default {
   name: 'BaseHeader',
+
   components: {
     GoBackButton
+  },
+
+  computed: {
+    isInCountry () {
+      return this.$route.name === 'Country'
+    }
   }
 }
 </script>
@@ -25,13 +32,14 @@ export default {
   width: 100vw;
   position: fixed;
   z-index: 1;
-  box-shadow: 0px 0px 10px 0px #c4c4c4;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 0px #727272;
 }
-.container {
+.header > div {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 90%;
+  width: 95%;
   margin: 15px auto;
 }
 

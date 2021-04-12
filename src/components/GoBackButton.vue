@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<style scope>
+<style scoped>
 .button {
   border: 1px solid var(--primary-bg-color);
   color: var(--color-text-primary);
@@ -29,5 +29,16 @@ export default {
   align-items: center;
   justify-content: space-around;
   padding: 5px 15px;
+}
+
+@media all and (max-width: 425px) {
+  .button {
+    border: none;
+    justify-content: flex-end;
+  }
+
+  .button span {
+    display: none;
+  }
 }
 </style>
