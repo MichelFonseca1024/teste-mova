@@ -44,6 +44,7 @@ export default {
       limitItems: 12
     }
   },
+  
   methods: {
     listItems () {
       const { pageActual, limitItems, totalPages, countries } = this

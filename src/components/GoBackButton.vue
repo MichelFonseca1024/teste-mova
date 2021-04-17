@@ -10,6 +10,7 @@
 <script>
 export default {
   name: 'GobackButton',
+
   props: {
     routerName: {
       type: String,

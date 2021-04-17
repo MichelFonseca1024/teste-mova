@@ -2,7 +2,7 @@
   <div v-if="type" class="filter">
     <p>{{ type.name }}</p>
     <select v-model="selected">
-      <option value="" selected disabled>Escolha uma {{ type.name }}</option>
+      <option :value="''" selected disabled>Escolha uma {{ type.name }}</option>
       <option
         v-for="(option, index) in options"
         :key="index"
@@ -32,7 +32,6 @@ export default {
   watch: {
     type () {
       this.getOptions()
-      this.selected = ''
     },
     selected () {
       this.CHANGE_FILTER(this.selected)
@@ -44,7 +43,6 @@ export default {
     async getOptions () {
       const Response = await api.get(`all?fields=${this.type.endpoint};`)
       this.key = this.type.endpoint
-
       this.options = this.filterData(Response.data)
     },
     filterData (arr) {
@@ -80,6 +78,7 @@ export default {
       if (key !== 'nativeName') {
         return option[key]
       }
+
       return option['iso639_1']
     },
 
@@ -90,8 +89,12 @@ export default {
       }
     }
   },
+
   created () {
     this.getRegion()
+    if (this.type) {
+      this.getOptions()
+    }
   },
 
   computed: {

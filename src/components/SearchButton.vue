@@ -8,11 +8,14 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
+
 export default {
   name: 'SearchButton',
+
   methods: {
     ...mapActions(['GET_COUNTRIES'])
   },
+
   computed: mapState(['filter'])
 }
 </script>
@@ -36,9 +39,11 @@ export default {
   .btn {
     text-align: end;
   }
+
   .btn button {
     width: 200px;
     height: 40px;
   }
+  
 }
 </style>

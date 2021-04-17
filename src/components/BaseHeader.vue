@@ -35,6 +35,7 @@ export default {
   background-color: #fff;
   box-shadow: 0px 0px 10px 0px #727272;
 }
+
 .header > div {
   display: flex;
   align-items: center;
@@ -50,4 +51,5 @@ export default {
 .logo img {
   height: 100%;
 }
+
 </style>

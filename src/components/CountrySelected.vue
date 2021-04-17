@@ -5,7 +5,8 @@
       <p>Nome: {{ country.name }}</p>
       <p>Capital: {{ country.capital }}</p>
       <p>
-        Região:<span class="region" @click="searchRegion(country.region)">
+        Região:
+        <span class="region" @click="searchRegion(country.region)">
           {{ country.region }}</span
         >
       </p>

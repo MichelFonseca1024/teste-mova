@@ -10,6 +10,7 @@ export default new Vuex.Store({
     filter: '',
     countries: null
   },
+
   mutations: {
     CHANGE_TYPE (state, payload) {
       state.type = payload
@@ -21,6 +22,7 @@ export default new Vuex.Store({
       state.countries = payload
     }
   },
+
   actions: {
     async GET_COUNTRIES (context, endpoint) {
       try {
@@ -34,5 +36,6 @@ export default new Vuex.Store({
       }
     }
   },
+
   modules: {}
 })

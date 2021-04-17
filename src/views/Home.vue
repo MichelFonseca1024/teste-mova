@@ -15,12 +15,14 @@ import CountriesList from '../components/CountriesList.vue'
 
 export default {
   name: 'Home',
+
   components: {
     FilterType,
     SelectByType,
     SearchButton,
     CountriesList
   },
+  
   computed: {
     hasCountries () {
       return this.$store.state.countries
